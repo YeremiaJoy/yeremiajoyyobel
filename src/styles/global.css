@@ -1,0 +1,68 @@
+@import "antd/dist/antd.css";
+
+html,
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--white);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BCB4B4;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+:root {
+  --dark-bg: #262626;
+  --gray-1: #BCB4B4;
+  --deep-dark: #1E1E1E;
+  --gray-2: #363636;
+  --white: white;
+  --black: black;
+  --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+  --inner-shadow: inset 2px 2px 3px #2c2c2c, inset -3px -3px 3px #363636;
+}
+
+h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.effect-0 {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  border-left: 15px solid transparent;
+  border-top: 5px solid #06d79c;
+  right: 0;
+  top: 0;
+}
