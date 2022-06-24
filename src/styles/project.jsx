@@ -18,24 +18,26 @@ export const ProjectContent = styled.div`
   }
 `;
 export const ProjectItems = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 16px;
   overflow: auto;
-  height: 480px;
   border-radius: 8px;
-  @media screen and (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 580px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  width: 100%;
+  padding-bottom: 16px;
+  // grid-template-columns: repeat(3, 1fr);
+  // @media screen and (max-width: 960px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+  // @media screen and (max-width: 580px) {
+  //   grid-template-columns: repeat(1, 1fr);
+  // }
 `;
 export const ProjectItem = styled.a`
+  min-width: 250px;
   box-shadow: var(--outer-shadow);
   border-radius: 8px;
   color: white;
-  position: relative;
+  background-color: var(--deep-dark);
   &:hover {
     color: white;
   }
@@ -49,21 +51,13 @@ export const ProjectItem = styled.a`
     font-size: 15px;
     font-weight: 600;
     padding: 5px 16px 0;
-    background-color: var(--deep-dark);
+    font-style: italic;
   }
   .desc {
-    height: 90px;
     font-size: 13px;
     padding: 0 16px 10px;
     text-align: justify;
-    background-color: var(--deep-dark);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    @media screen and (max-width: 1100px) {
-      height: 120px;
-    }
-    @media screen and (max-width: 580px) {
-      height: max-content;
-    }
   }
 `;

@@ -12,7 +12,7 @@ export const FooterContent = styled.div`
   position: relative;
   @media screen and (max-width: 660px) {
     .email{
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 `;
