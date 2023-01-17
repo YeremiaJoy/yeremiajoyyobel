@@ -8,20 +8,20 @@ import {
   ToolsContainer,
   WorkExperience,
 } from "../styles/biodata";
+import systeric from "../assets/images/systeric.jfif"
+import xtremax from "../assets/images/xtremax.jfif"
 
 const WorkExperiences = [
   {
     id: 1,
-    image:
-      "https://media-exp2.licdn.com/dms/image/C560BAQEGi4QpOEil8w/company-logo_200_200/0/1617164147096?e=1663804800&v=beta&t=TCxl32bFwP3LfgZDHwsPHtCToz2C00SPrqhn8sTkYrI",
+    image: systeric,
     name: "PT. Systeric Teknologi Indonexia",
     period: "August 2021 - February 2022",
     web: "https://www.systeric.com/",
   },
   {
     id: 2,
-    image:
-      "https://media-exp2.licdn.com/dms/image/C560BAQGZUTKmp-2Jjw/company-logo_200_200/0/1537436986424?e=1663804800&v=beta&t=5IeMbwjnBei2dzPwmJE-E-FYmuAf2o0AdubVVAeBe7A",
+    image: xtremax,
     name: "PT. Xtremax Teknologi Indonexia",
     period: "June 2022 - Present",
     web: "https://www.xtremax.com/",
