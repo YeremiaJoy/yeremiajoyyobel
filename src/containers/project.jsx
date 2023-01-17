@@ -16,7 +16,7 @@ const project = [
     name: "Jasain.com ",
     desc: "Jasain is e-commerce service business website, build using Next.js, Ant Design, Redux, and MERN (MongoDB, Express, React, Node Js) Stack  (Feb 2022)",
     img: project1,
-    link: "https://jasain.com",
+    link: "https://jasain-landing-page-one.vercel.app/",
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const project = [
     name: "My Own Portfolio",
     desc: "Yap! This is my first portfolio that I created to put all the information about me on this website. I learn ReactJs to build my own Portfolio.   (Jul 2021)",
     img: project4,
-    link: "https://yeremiajoy.github.io",
+    link: "#",
   },
 ];
 
