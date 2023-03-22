@@ -7,7 +7,7 @@ import CV from "../assets/cv/CV - YEREMIA JOY YOBEL TANADI.pdf";
 import Typed from "react-typed";
 
 function About() {
-  const experienceDate = new Date("8/19/2021");
+  const experienceDate = new Date("1/1/2022");
   const now = new Date();
   const diff = new Date(
     now.getFullYear() - experienceDate.getFullYear(),
@@ -99,14 +99,17 @@ function About() {
             University majoring in Computer Science. During college, I had an
             experience as a Head of Student Association called "Himpunan
             Mahasiswa Teknik Informatika (HIMTI)” in 2020. I have experience in
-            Frontend Development ±{diff.getYear() + 1} years. I'm currently
+            Frontend Development ±{diff.getYear()} years. I'm currently
             developing some website projects using javascript framework like{" "}
             <a href="https://reactjs.org/" rel="noreferrer" target="_blank">
-              React App{" "}
+              React App,{" "}
+            </a>
+            <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
+              Next.js{" "}
             </a>
             and{" "}
-            <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
-              Next.js
+            <a href="https://vuejs.org/" rel="noreferrer" target="_blank">
+              Vue
             </a>
           </p>
           <a href={CV} style={{ display: "flex", width: "fit-content" }}>

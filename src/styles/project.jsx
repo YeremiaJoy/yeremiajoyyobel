@@ -16,6 +16,9 @@ export const ProjectContent = styled.div`
   h2 {
     margin-bottom: 20px;
   }
+  .swiper-pagination {
+    bottom: -6px;
+  }
 `;
 export const ProjectItems = styled.div`
   display: flex;
@@ -32,7 +35,7 @@ export const ProjectItems = styled.div`
   //   grid-template-columns: repeat(1, 1fr);
   // }
 `;
-export const ProjectItem = styled.a`
+export const ProjectItem = styled.div`
   min-width: 250px;
   box-shadow: var(--outer-shadow);
   border-radius: 8px;

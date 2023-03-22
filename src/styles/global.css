@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   box-sizing: border-box;
   outline: none;
@@ -34,8 +34,8 @@ body {
 
 :root {
   --dark-bg: #262626;
-  --gray-1: #BCB4B4;
-  --deep-dark: #1E1E1E;
+  --gray-1: #bcb4b4;
+  --deep-dark: #1e1e1e;
   --gray-2: #363636;
   --white: white;
   --black: black;
@@ -66,3 +66,10 @@ h2 {
   right: 0;
   top: 0;
 }
+
+/* .slick-slide {
+  margin: 0 5px;
+}
+.slick-list {
+  margin: 0 -5px;
+} */

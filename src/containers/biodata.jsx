@@ -8,8 +8,8 @@ import {
   ToolsContainer,
   WorkExperience,
 } from "../styles/biodata";
-import systeric from "../assets/images/systeric.jfif"
-import xtremax from "../assets/images/xtremax.jfif"
+import systeric from "../assets/images/systeric.jfif";
+import xtremax from "../assets/images/xtremax.jfif";
 
 const WorkExperiences = [
   {
@@ -28,8 +28,52 @@ const WorkExperiences = [
   },
 ];
 
+const tools = [
+  {
+    link: "https://reactjs.org/",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png",
+    name: "React",
+  },
+  {
+    link: "https://nextjs.org/",
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg",
+    name: "Next.js",
+  },
+  {
+    link: "https://vuejs.org/",
+    image: "https://avatars.githubusercontent.com/u/6128107?s=200&v=4",
+    name: "Vue",
+  },
+  {
+    link: "https://www.typescriptlang.org/",
+    image:
+      "https://user-images.githubusercontent.com/73683623/226783790-afd1d57f-70c7-4a63-ad6a-91e38a8bf7b5.png",
+    name: "TypeScript",
+  },
+  {
+    link: "https://emotion.sh/",
+    image:
+      "https://user-images.githubusercontent.com/73683623/156110684-200a3c13-a363-4118-ae9e-42013ac6c6c8.png",
+    name: "Emotion",
+  },
+  {
+    link: "https://graphql.org/",
+    image:
+      "https://user-images.githubusercontent.com/73683623/156109923-4316ac94-692b-4f99-a231-13f8cbbf352e.png",
+    name: "GraphQL",
+  },
+  {
+    link: "https://redux.js.org/",
+    image:
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+    name: "Redux",
+  },
+];
+
 function Biodata() {
-  const experienceDate = new Date("8/19/2021");
+  const experienceDate = new Date("1/1/2022");
   const now = new Date();
   const diff = new Date(
     now.getFullYear() - experienceDate.getFullYear(),
@@ -68,61 +112,22 @@ function Biodata() {
         <ToolsContainer>
           <h2>Tools</h2>
           <Tools>
-            <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-              <ToolItems>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png"
-                  alt="react"
-                  height={40}
-                />
-                <div className="line"></div>
-                React
-              </ToolItems>
-            </a>
-            <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-              <ToolItems>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg"
-                  alt="next"
-                  height={40}
-                />
-                <div className="line"></div>
-                Next.js
-              </ToolItems>
-            </a>
-            <a href="https://emotion.sh/" target="_blank" rel="noreferrer">
-              <ToolItems>
-                <img
-                  src="https://user-images.githubusercontent.com/73683623/156110684-200a3c13-a363-4118-ae9e-42013ac6c6c8.png"
-                  alt="emotion"
-                  height={40}
-                />
-                <div className="line"></div>
-                Emotion
-              </ToolItems>
-            </a>
-            <a href="https://graphql.org/" target="_blank" rel="noreferrer">
-              <ToolItems>
-                <img
-                  src="https://user-images.githubusercontent.com/73683623/156109923-4316ac94-692b-4f99-a231-13f8cbbf352e.png"
-                  alt="graphql"
-                  height={40}
-                />
-                <div className="line"></div>
-                GraphQL
-              </ToolItems>
-            </a>
-            <a href="https://redux.js.org" target="_blank" rel="noreferrer">
-              <ToolItems>
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-                  alt="redux"
-                  height={40}
-                />
-                <div className="line"></div>
-                Redux
-              </ToolItems>
-            </a>
+            {tools.map((tool) => {
+              return (
+                <a
+                  href={tool.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={tool.name}
+                >
+                  <ToolItems>
+                    <img src={tool.image} alt={tool.name} height={40} />
+                    <div className="line"></div>
+                    {tool.name}
+                  </ToolItems>
+                </a>
+              );
+            })}
           </Tools>
         </ToolsContainer>
       </BiodataContent>
