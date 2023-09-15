@@ -120,8 +120,9 @@ export const AboutContent = styled.div`
     border-radius: 50%;
     img {
       border-radius: inherit;
-      max-width: 300px;
-      max-height: 300px;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
       background: #42474b;
       border: 8px solid transparent;
       box-shadow: var(--inner-shadow);

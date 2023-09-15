@@ -23,7 +23,7 @@ const WorkExperiences = [
     id: 2,
     image: xtremax,
     name: "PT. Xtremax Teknologi Indonexia",
-    period: "June 2022 - Present",
+    period: "June 2022 - September 2023",
     web: "https://www.xtremax.com/",
   },
 ];
@@ -45,6 +45,12 @@ const tools = [
     link: "https://vuejs.org/",
     image: "https://avatars.githubusercontent.com/u/6128107?s=200&v=4",
     name: "Vue",
+  },
+  {
+    link: "https://vitejs.dev/",
+    image:
+      "https://vitejs.dev/logo.svg",
+    name: "Vite",
   },
   {
     link: "https://www.typescriptlang.org/",
@@ -110,7 +116,7 @@ function Biodata() {
           <div>Front End Development</div>
         </LongExperience>
         <ToolsContainer>
-          <h2>Tools</h2>
+          <h2>Main Tools</h2>
           <Tools>
             {tools.map((tool) => {
               return (
