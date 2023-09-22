@@ -23,7 +23,7 @@ const WorkExperiences = [
     id: 2,
     image: xtremax,
     name: "PT. Xtremax Teknologi Indonexia",
-    period: "June 2022 - September 2023",
+    period: "June 2022 - October 2023",
     web: "https://www.xtremax.com/",
   },
 ];
