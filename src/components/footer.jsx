@@ -16,15 +16,15 @@ function Footer() {
   return (
     <FooterContainer id="footer">
       <FooterContent>
-        <FooterGetInTouch>Get in Touch</FooterGetInTouch>
-        <div className="email">
-          For recruitment inquiries, please contact me{" "}
+        <FooterGetInTouch className="reveal">Let's work together</FooterGetInTouch>
+        <div className="email reveal reveal-delay-1">
+          Reach me at{" "}
           <a href="mailto:yeremiajoy@gmail.com">yeremiajoy@gmail.com</a>
         </div>
-        <div className="center" style={{ fontSize: 12, marginTop: 16 }}>
-          YJYT © 2022 | built by Yeremia Joy Yobel T.
+        <div className="copyright reveal reveal-delay-2">
+          &copy; {new Date().getFullYear()} Yeremia Joy Yobel Tanadi
         </div>
-        <SocialIcons>
+        <SocialIcons className="reveal reveal-delay-2">
           <a
             href="https://github.com/YeremiaJoy"
             target="_blank"

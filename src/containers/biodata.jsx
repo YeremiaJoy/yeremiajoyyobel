@@ -13,18 +13,31 @@ import xtremax from "../assets/images/xtremax.jfif";
 
 const WorkExperiences = [
   {
-    id: 1,
-    image: systeric,
-    name: "PT. Systeric Teknologi Indonexia",
-    period: "August 2021 - February 2022",
-    web: "https://www.systeric.com/",
+    id: 3,
+    image: "https://mekari.com/wp-content/uploads/2022/04/logo-mekari.svg",
+    name: "Mekari",
+    role: "Frontend Engineer",
+    period: "Oct 2023 – present",
+    web: "https://mekari.com/",
+    current: true,
   },
   {
     id: 2,
     image: xtremax,
-    name: "PT. Xtremax Teknologi Indonexia",
-    period: "June 2022 - October 2023",
+    name: "PT. Xtremax Teknologi Indonesia",
+    role: "Frontend Developer",
+    period: "Jun 2022 – Oct 2023",
     web: "https://www.xtremax.com/",
+    current: false,
+  },
+  {
+    id: 1,
+    image: systeric,
+    name: "PT. Systeric Teknologi Indonesia",
+    role: "Frontend Developer",
+    period: "Aug 2021 – Feb 2022",
+    web: "https://www.systeric.com/",
+    current: false,
   },
 ];
 
@@ -32,7 +45,7 @@ const tools = [
   {
     link: "https://reactjs.org/",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/220px-React-icon.svg.png",
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
     name: "React",
   },
   {
@@ -47,9 +60,13 @@ const tools = [
     name: "Vue",
   },
   {
+    link: "https://nuxt.com/",
+    image: "https://nuxt.com/favicon.ico",
+    name: "Nuxt",
+  },
+  {
     link: "https://vitejs.dev/",
-    image:
-      "https://vitejs.dev/logo.svg",
+    image: "https://vitejs.dev/logo.svg",
     name: "Vite",
   },
   {
@@ -88,35 +105,34 @@ function Biodata() {
 
   return (
     <BiodataContainer id="biodata">
-      <div
-        className="effect-0"
-        // style={{ marginLeft: moveX, marginTop: moveY }}
-      ></div>
       <WorkExperience>
-        <h2>Work Experience</h2>
+        <h2 className="reveal">Work experience</h2>
         {WorkExperiences.map((val) => {
           return (
-            <a href={val.web} target="_blank" rel="noreferrer" key={val.id}>
-              <img src={val.image} alt={val.name} width={50} />
+            <a href={val.web} target="_blank" rel="noreferrer" key={val.id} className="reveal">
+              <img src={val.image} alt={val.name} width={44} />
               <div className="company">
-                <div className="company-name">{val.name}</div>
-                <div>{val.period}</div>
+                <div className="company-name">
+                  {val.name}
+                  {val.current && <span className="current-tag">Now</span>}
+                </div>
+                <div>{val.role} &middot; {val.period}</div>
               </div>
             </a>
           );
         })}
       </WorkExperience>
       <BiodataContent>
-        <LongExperience>
+        <LongExperience className="reveal">
           <span>
             <h2>{diff.getYear()}</h2> Years
             <h2>{diff.getMonth()}</h2> Months
           </span>
-          <div>Working Experience</div>
-          <div>Front End Development</div>
+          <div>Working experience</div>
+          <div>Frontend development</div>
         </LongExperience>
         <ToolsContainer>
-          <h2>Main Tools</h2>
+          <h2 className="reveal">Tech stack</h2>
           <Tools>
             {tools.map((tool) => {
               return (
@@ -127,8 +143,7 @@ function Biodata() {
                   key={tool.name}
                 >
                   <ToolItems>
-                    <img src={tool.image} alt={tool.name} height={40} />
-                    <div className="line"></div>
+                    <img src={tool.image} alt={tool.name} height={36} />
                     {tool.name}
                   </ToolItems>
                 </a>

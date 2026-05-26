@@ -1,9 +1,8 @@
 import { AboutContainer, AboutContent } from "../styles/about";
 import photo from "../assets/images/foto banner top.png";
-import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
 import { Button } from "../styles/navbar";
 import { DownloadOutlined } from "@ant-design/icons";
-import CV from "../assets/cv/CV - YEREMIA JOY YOBEL TANADI.pdf";
+import CV from "../assets/cv/Yeremia Joy Yobel Tanadi - Software Engineer Frontend.pdf";
 import Typed from "react-typed";
 
 function About() {
@@ -16,114 +15,51 @@ function About() {
 
   return (
     <AboutContainer id="about">
-      <div className="effect-wrap">
-        <div
-          className="effect-0"
-          // style={{ marginLeft: moveX, marginTop: moveY }}
-        ></div>
-        <div
-          className="effect effect-1"
-          // style={{ marginLeft: moveX, marginTop: moveY }}
-        ></div>
-        <div
-          className="effect effect-2"
-          // style={{ marginLeft: moveX, marginTop: moveY }}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div
-          className="effect effect-4"
-          // style={{ marginLeft: moveX, marginTop: moveY }}
-        ></div>
-        <div
-          className="effect effect-5"
-          // style={{ marginLeft: moveX, marginTop: moveY }}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
       <AboutContent>
-        <div className="mobile">
-          <img src={photo} alt="myphoto" />
+        <div className="mobile reveal">
+          <img src={photo} alt="Yeremia Joy - Frontend Software Engineer" />
         </div>
         <div>
-          <div className="name">Hello, I'm Yeremia Joy</div>
-          <div className="interested">
-            and I interested in{" "}
+          <div className="badge reveal">
+            <span className="dot"></span>
+            Currently at Mekari
+          </div>
+          <div className="name reveal reveal-delay-1">Yeremia Joy</div>
+          <div className="interested reveal reveal-delay-2">
+            Frontend Software Engineer focused on{" "}
             <Typed
               className="typed-text"
-              strings={["FRONTEND DEVELOPMENT"]}
+              strings={["Nuxt.js", "Vue", "React", "Next.js", "TypeScript"]}
               typeSpeed={60}
-              backSpeed={50}
+              backSpeed={40}
               loop
             />
           </div>
-          <p>
-            People usually call me "Joy" and I'm a freshgraduate from BINUS
-            University majoring in Computer Science. During college, I had an
-            experience as a Head of Student Association called "Himpunan
-            Mahasiswa Teknik Informatika (HIMTI)” in 2020. I have experience in
-            Frontend Development ±{diff.getYear()} years. I'm currently
-            developing some website projects using javascript framework like{" "}
-            <a href="https://reactjs.org/" rel="noreferrer" target="_blank">
-              React App,{" "}
+          <p className="reveal reveal-delay-3">
+            A software engineer with {diff.getYear()}+ years of experience
+            building web applications. Currently at{" "}
+            <a href="https://mekari.com/" rel="noreferrer" target="_blank">
+              Mekari
             </a>
-            <a href="https://nextjs.org/" rel="noreferrer" target="_blank">
-              Next.js{" "}
+            , working on the Expense Management product. Previously contributed
+            to enterprise products at{" "}
+            <a href="https://www.xtremax.com/" rel="noreferrer" target="_blank">
+              Xtremax
             </a>
-            and{" "}
-            <a href="https://vuejs.org/" rel="noreferrer" target="_blank">
-              Vue
-            </a>
+            . Graduated from BINUS University with a degree in Computer Science.
           </p>
-          <a href={CV} style={{ display: "flex", width: "fit-content" }}>
-            <Button className="center">
-              <DownloadOutlined style={{ marginRight: 5 }} /> Download CV
+          <a href={CV} className="cv-link reveal reveal-delay-4">
+            <Button>
+              <DownloadOutlined style={{ marginRight: 6 }} /> Download CV
             </Button>
           </a>
         </div>
-        <div className="desktop">
-          <img src={photo} alt="myphoto" />
+        <div className="desktop reveal reveal-delay-2">
+          <img src={photo} alt="Yeremia Joy Yobel - Frontend Engineer" />
         </div>
         <div className="hero__scrollDown">
-          <p>Scroll</p>
-          <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
+          <div className="scroll-line"></div>
+          <p>scroll</p>
         </div>
       </AboutContent>
     </AboutContainer>

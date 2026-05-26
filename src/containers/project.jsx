@@ -2,104 +2,115 @@ import React from "react";
 import {
   ProjectContainer,
   ProjectContent,
-  ProjectItem,
+  FeaturedCard,
+  ProjectGrid,
+  ProjectCard,
 } from "../styles/project";
 import project1 from "../assets/images/main_project.png";
 import project2 from "../assets/images/project2.png";
 import project3 from "../assets/images/project3.png";
 import project4 from "../assets/images/project4.png";
 import project5 from "../assets/images/project5.png";
-// import Swiper core and required modules
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-const project = [
+const projects = [
   {
-    id: Math.floor(Math.random() * 100),
-    name: "Event Live Streaming & Invitation",
-    desc: "Provide a YouTube video with dynamic invitation name, integrated with custom CMS and stored in MongoDB. Build using Next.js with material UI library and express.js for backend development (Jan 2023)",
-    img: project5,
-    link: "https://jacobnco.vercel.app/woman-man?to=Tamu",
-  },
-  {
-    id: Math.floor(Math.random() * 100),
-    name: "Registration App (Mobile Web)",
-    desc: "Application that integrated with backend and stored in database, used for user attendance only use QR code. Build using MERN (MongoDB, Express, React, Node Js) stack (Oct 2022)",
-    img: project4,
-    link: "https://registration-application.vercel.app",
-  },
-  {
-    id: Math.floor(Math.random() * 100),
+    id: 1,
     name: "Jasain.com",
-    desc: "Jasain is e-commerce service business website, build using Next.js, Ant Design, Redux, and MERN (MongoDB, Express, React, Node Js) stack (Feb 2022)",
+    desc: "E-commerce service platform built with Next.js, Ant Design, Redux, and MERN stack.",
     img: project1,
     link: "https://jasain-landing-page-one.vercel.app/",
+    tags: ["Next.js", "Redux", "Ant Design"],
   },
   {
-    id: Math.floor(Math.random() * 100),
-    name: "Werkules ERP Admin",
-    desc: "(website not active) Developed Enterprise Resource Planning (ERP) Progressive Web App used for Contractors in Germany to plan construction sites, inventories, working hours, etc.  (Sep 2021)",
+    id: 2,
+    name: "Birthday invitation App",
+    desc: "Invitation with RSVP form and guest list management, built using Next.js and Supabase.",
+    img: project5,
+    link: "https://joashonederfulyear.vercel.app?name=Joash",
+    tags: ["Next.js", "Supabase"],
+  },
+  {
+    id: 3,
+    name: "Registration app",
+    desc: "QR code-based attendance system with backend integration and database storage. MERN stack.",
+    img: project4,
+    link: "https://registration-application.vercel.app",
+    tags: ["React", "Node.js", "MongoDB"],
+  },
+  {
+    id: 4,
+    name: "Werkules ERP admin",
+    desc: "Enterprise resource planning PWA for German contractors — managing sites, inventories, and working hours.",
     img: project2,
     link: "https://dev.werkules.systeric.com/",
+    tags: ["React", "PWA", "ERP"],
   },
   {
-    id: Math.floor(Math.random() * 100),
+    id: 5,
     name: "TitipPaket",
-    desc: "This is my project with Systeric Teknologi Indonesia Team, TitipPaket is an Economical delivery app with pick up service, developed with NextJs and Ant Design.  (Aug 2021)",
+    desc: "Economical delivery app with pick-up service, developed at Systeric Teknologi Indonesia.",
     img: project3,
     link: "https://github.com/YeremiaJoy/TitipPaket",
+    tags: ["Next.js", "Ant Design"],
+    isGithub: true,
   },
 ];
 
 function Project() {
+  const [featured, ...rest] = projects;
+
   return (
     <ProjectContainer id="project">
-      <div
-        className="effect-0"
-        // style={{ marginLeft: moveX, marginTop: moveY }}
-      ></div>
       <ProjectContent>
-        <h2 className="center">My Project List</h2>
-        {/* <ProjectItems> */}
-        <Swiper
-          spaceBetween={16}
-          modules={[Pagination]}
-          slidesPerView={1}
-          breakpoints={{
-            960: {
-              slidesPerView: 3,
-            },
-            767: {
-              slidesPerView: 2,
-            },
-          }}
-          pagination={{ clickable: true }}
-          className="package-card-container"
+        <h2 className="reveal">Selected projects</h2>
+
+        <FeaturedCard
+          href={featured.link}
+          target="_blank"
+          rel="noreferrer"
+          className="reveal reveal-delay-1"
         >
-          {project.map((val, idx) => {
-            return (
-              <SwiperSlide key={idx}>
-                <ProjectItem>
-                  <a href={val.link} target="_blank" rel="noreferrer">
-                    <img
-                      src={val.img}
-                      alt={val.name}
-                      width="100%"
-                      height="100%"
-                    />
-                  </a>
-                  <div className="name">{val.name}</div>
-                  <div className="desc">{val.desc}</div>
-                </ProjectItem>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        {/* </ProjectItems> */}
+          <div className="featured-img">
+            <img src={featured.img} alt={featured.name} />
+          </div>
+          <div className="featured-body">
+            <div className="proj-number">01</div>
+            <div className="proj-title">{featured.name}</div>
+            <div className="proj-desc">{featured.desc}</div>
+            <div className="tags">
+              {featured.tags.map((t) => (
+                <span key={t}>{t}</span>
+              ))}
+            </div>
+            <div className="proj-link">View project →</div>
+          </div>
+        </FeaturedCard>
+
+        <ProjectGrid>
+          {rest.map((val, i) => (
+            <ProjectCard
+              key={val.id}
+              href={val.link}
+              target="_blank"
+              rel="noreferrer"
+              className={`reveal reveal-delay-${(i % 3) + 2}`}
+            >
+              <div className="card-img">
+                <img src={val.img} alt={val.name} />
+              </div>
+              <div className="card-body">
+                <div className="proj-number">0{i + 2}</div>
+                <div className="proj-title">{val.name}</div>
+                <div className="proj-desc">{val.desc}</div>
+                <div className="tags">
+                  {val.tags.map((t) => (
+                    <span key={t}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            </ProjectCard>
+          ))}
+        </ProjectGrid>
       </ProjectContent>
     </ProjectContainer>
   );
