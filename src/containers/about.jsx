@@ -3,7 +3,7 @@ import photo from "../assets/images/foto banner top.png";
 import { Button } from "../styles/navbar";
 import { DownloadOutlined } from "@ant-design/icons";
 import CV from "../assets/cv/Yeremia Joy Yobel Tanadi - Software Engineer Frontend.pdf";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 
 function About() {
   const experienceDate = new Date("1/1/2022");
@@ -27,7 +27,7 @@ function About() {
           <div className="name reveal reveal-delay-1">Yeremia Joy</div>
           <div className="interested reveal reveal-delay-2">
             Frontend Software Engineer focused on{" "}
-            <Typed
+            <ReactTyped
               className="typed-text"
               strings={["Nuxt.js", "Vue", "React", "Next.js", "TypeScript"]}
               typeSpeed={60}
